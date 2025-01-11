@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /* background-color: #4b626b; */
+    background-image: url("background-with-metallic-grid-texture.jpg");
+    background-size: cover;
+    text-align: center;
+
+}
+
+#img{
+    opacity: 0.3;
+    background-size: cover;
+}
+
+#title{
+    color: #cfc380;
+    padding-top: 20px;
+    font-family: monospace;
+    font-size: 8vmin;
+
+}
+
+.container{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+   
+}
+
+.game{
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 5px;
+    
+}
+
+.box{
+    height: 15vmin;
+    width: 15vmin;
+    border-color: #ef476f;
+    border-radius: 15px;
+    box-shadow: 0 0 16px rgba(0,0,0,0.6);
+    font-size: 5vmin;
+    color: #ef476f;  
+}
+.box:hover{
+    background-color: #97b9ce;
+    transition: 0.5s all ease;
+    height: 14vmin;
+    width: 14vmin;
+  
+}
+
+#reset-game{
+    padding-top: -15px;
+    height: 5vmin;
+    width: 15vmin;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 16px rgba(128, 104, 104, 0.6); 
+    font-size: 2.5vmin;
+    color: #4b626b;
+    background-color: #e8e8e8;
+}
+
+#reset-game:hover{
+    background-color: #c8e0f4;
+    height: 6vmin;
+    width: 16vmin;
+    transition: 0.5s all ease;
+    
+}
+
+#new-game{
+    margin-top: 80px;
+    height: 5vmin;
+    width: 15vmin;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 16px rgba(128, 104, 104, 0.6); 
+    font-size: 2.5vmin;
+    color: #4b626b;
+    background-color: #e8e8e8;
+}
+#new-game:hover{
+    background-color: #c8e0f4;
+    
+}
+
+#win-msg{
+    
+    color: #fdf0d5;
+    font-size: 5vmin;
+    font-family: cursive;
+}
+
+.msg-container{
+    height: 100vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column ;
+    gap: 4rems;
+}
+
+.hide{
+    display: none;
+}
