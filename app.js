@@ -5,7 +5,7 @@ let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#win-msg");
 
 let turnO = true;
-let click_count=0;
+let click_count = 0;
 
 const winPatterns = [
   [0, 1, 2],
@@ -19,6 +19,7 @@ const winPatterns = [
 ];
 
 const resetGame = () => {
+  click_count = 0;
   turnO = true;
   enableBoxes();
   msgContainer.classList.add("hide");
@@ -26,6 +27,7 @@ const resetGame = () => {
 
 boxes.forEach((box) => {
   box.addEventListener("click", () => {
+    click_count++;
     if (turnO === true) {
       box.innerText = "O";
       turnO = false;
@@ -50,7 +52,12 @@ const enableBoxes = () => {
   }
 };
 showWinner = (winner) => {
-  msg.innerText = `Congratulations, Winner is Player (${winner})`;
+  if (winner == 9) {
+    msg.innerText = "Match Tied";
+  } else {
+    msg.innerText = `Congratulations, player ${winner} is Winner`;
+  }
+
   msgContainer.classList.remove("hide");
   disableBoxes();
 };
@@ -65,6 +72,8 @@ checkWinner = () => {
       if (val1 === val2 && val2 === val3) {
         console.log(`Winner is Player ${val1}`);
         showWinner(val1);
+      } else if (click_count == 9) {
+        showWinner(click_count);
       }
     }
   }
